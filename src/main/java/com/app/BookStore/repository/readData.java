@@ -1,6 +1,7 @@
 package com.app.BookStore.repository;
 
 import com.app.BookStore.model.Book;
+import com.app.BookStore.model.LibraryStatistics;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.Getter;
@@ -52,5 +53,18 @@ public class readData
             return newBook;
         }
         return null;
+    }
+
+    public LibraryStatistics getLibraryStatistics()
+    {
+        LibraryStatistics libraryStatistics = new LibraryStatistics();
+        libraryStatistics.setAverageBookPrice(books.stream().mapToDouble(Book::getPrice).average().orElse(0.0));
+        libraryStatistics.setTotalBooks((long) books.size());
+        libraryStatistics.setTotalInventory(books.stream().mapToLong(Book::getQuantity).sum());
+        libraryStatistics.setTotalInventoryValue(books.stream().mapToDouble(book -> book.getPrice() * book.getQuantity()).sum());
+        libraryStatistics.setHighestPricedBook(books.stream().max((b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice())).map(Book::getBookName).orElse("N/A"));
+        libraryStatistics.setLowestPricedBook(books.stream().min((b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice())).map(Book::getBookName).orElse("N/A"));
+
+        return libraryStatistics;
     }
 }

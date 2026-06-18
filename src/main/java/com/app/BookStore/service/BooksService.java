@@ -1,6 +1,7 @@
 package com.app.BookStore.service;
 
 import com.app.BookStore.model.Book;
+import com.app.BookStore.model.LibraryStatistics;
 import com.app.BookStore.repository.readData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,5 +23,9 @@ public class BooksService
 
     public Book addBooks(Book newBook) {
         return data.addBooks(newBook);
+    }
+
+    public LibraryStatistics getLibraryStatistics() {
+        return data.getLibraryStatistics();
     }
 }

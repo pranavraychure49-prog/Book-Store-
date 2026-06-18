@@ -1,6 +1,7 @@
 package com.app.BookStore.controller;
 
 import com.app.BookStore.model.Book;
+import com.app.BookStore.model.LibraryStatistics;
 import com.app.BookStore.service.BooksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,5 +31,11 @@ public class BooksController
     public Book addBook(@RequestBody Book newBook)
     {
         return booksService.addBooks(newBook);
+    }
+
+    @GetMapping("/admin")
+    public LibraryStatistics getLibraryStatistics()
+    {
+        return booksService.getLibraryStatistics();
     }
 }
