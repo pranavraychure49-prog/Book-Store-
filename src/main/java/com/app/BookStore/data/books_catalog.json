@@ -7,7 +7,7 @@
   "price" : 599.0,
   "quantity" : 20,
   "publishedYear" : 2008,
-  "isbn" : "9780132350884",
+  "isbn" : "9.78013E+12",
   "language" : "English"
 }, {
   "id" : 2,
@@ -18,7 +18,7 @@
   "price" : 699.0,
   "quantity" : 15,
   "publishedYear" : 2018,
-  "isbn" : "9780134685991",
+  "isbn" : "9.78013E+12",
   "language" : "English"
 }, {
   "id" : 3,
@@ -29,7 +29,7 @@
   "price" : 799.0,
   "quantity" : 10,
   "publishedYear" : 2022,
-  "isbn" : "9781617297571",
+  "isbn" : "9.78162E+12",
   "language" : "English"
 }, {
   "id" : 4,
@@ -40,7 +40,7 @@
   "price" : 899.0,
   "quantity" : 8,
   "publishedYear" : 2006,
-  "isbn" : "9780321349606",
+  "isbn" : "9.78032E+12",
   "language" : "English"
 }, {
   "id" : 5,
@@ -51,7 +51,7 @@
   "price" : 999.0,
   "quantity" : 12,
   "publishedYear" : 1994,
-  "isbn" : "9780201633610",
+  "isbn" : "9.7802E+12",
   "language" : "English"
 }, {
   "id" : 6,
@@ -62,7 +62,7 @@
   "price" : 650.0,
   "quantity" : 18,
   "publishedYear" : 1999,
-  "isbn" : "9780135957059",
+  "isbn" : "9.78014E+12",
   "language" : "English"
 }, {
   "id" : 7,
@@ -73,7 +73,7 @@
   "price" : 850.0,
   "quantity" : 14,
   "publishedYear" : 2018,
-  "isbn" : "9780134757599",
+  "isbn" : "9.78013E+12",
   "language" : "English"
 }, {
   "id" : 8,
@@ -84,7 +84,7 @@
   "price" : 550.0,
   "quantity" : 25,
   "publishedYear" : 2005,
-  "isbn" : "9780596009205",
+  "isbn" : "9.7806E+12",
   "language" : "English"
 }, {
   "id" : 9,
@@ -95,7 +95,7 @@
   "price" : 1200.0,
   "quantity" : 7,
   "publishedYear" : 2018,
-  "isbn" : "9781617294549",
+  "isbn" : "9.78162E+12",
   "language" : "English"
 }, {
   "id" : 10,
@@ -106,7 +106,7 @@
   "price" : 1100.0,
   "quantity" : 5,
   "publishedYear" : 2003,
-  "isbn" : "9780321125217",
+  "isbn" : "9.78032E+12",
   "language" : "English"
 }, {
   "id" : 11,
@@ -117,7 +117,7 @@
   "price" : 950.0,
   "quantity" : 22,
   "publishedYear" : 2020,
-  "isbn" : "9781736049112",
+  "isbn" : "9.78174E+12",
   "language" : "English"
 }, {
   "id" : 12,
@@ -128,7 +128,7 @@
   "price" : 700.0,
   "quantity" : 16,
   "publishedYear" : 2016,
-  "isbn" : "9781617292231",
+  "isbn" : "9.78162E+12",
   "language" : "English"
 }, {
   "id" : 13,
@@ -139,7 +139,7 @@
   "price" : 1500.0,
   "quantity" : 9,
   "publishedYear" : 2009,
-  "isbn" : "9780262033848",
+  "isbn" : "9.78026E+12",
   "language" : "English"
 }, {
   "id" : 14,
@@ -150,7 +150,7 @@
   "price" : 900.0,
   "quantity" : 30,
   "publishedYear" : 2015,
-  "isbn" : "9780984782857",
+  "isbn" : "9.78098E+12",
   "language" : "English"
 }, {
   "id" : 15,
@@ -161,7 +161,7 @@
   "price" : 650.0,
   "quantity" : 17,
   "publishedYear" : 2020,
-  "isbn" : "9781098124045",
+  "isbn" : "9.7811E+12",
   "language" : "English"
 }, {
   "id" : 16,
@@ -172,7 +172,7 @@
   "price" : 850.0,
   "quantity" : 11,
   "publishedYear" : 2021,
-  "isbn" : "9781617298691",
+  "isbn" : "9.78162E+12",
   "language" : "English"
 }, {
   "id" : 17,
@@ -183,7 +183,7 @@
   "price" : 1300.0,
   "quantity" : 6,
   "publishedYear" : 2021,
-  "isbn" : "9781492034025",
+  "isbn" : "9.78149E+12",
   "language" : "English"
 }, {
   "id" : 18,
@@ -194,7 +194,7 @@
   "price" : 1250.0,
   "quantity" : 8,
   "publishedYear" : 2022,
-  "isbn" : "9781098110208",
+  "isbn" : "9.7811E+12",
   "language" : "English"
 }, {
   "id" : 19,
@@ -205,7 +205,7 @@
   "price" : 800.0,
   "quantity" : 14,
   "publishedYear" : 2023,
-  "isbn" : "9781521822807",
+  "isbn" : "9.78152E+12",
   "language" : "English"
 }, {
   "id" : 20,
@@ -216,6 +216,6 @@
   "price" : 750.0,
   "quantity" : 19,
   "publishedYear" : 2018,
-  "isbn" : "9781942788294",
+  "isbn" : "9.78194E+12",
   "language" : "English"
 } ]

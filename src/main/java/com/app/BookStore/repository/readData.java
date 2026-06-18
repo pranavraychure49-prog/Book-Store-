@@ -58,12 +58,38 @@ public class readData
     public LibraryStatistics getLibraryStatistics()
     {
         LibraryStatistics libraryStatistics = new LibraryStatistics();
-        libraryStatistics.setAverageBookPrice(books.stream().mapToDouble(Book::getPrice).average().orElse(0.0));
+
         libraryStatistics.setTotalBooks((long) books.size());
         libraryStatistics.setTotalInventory(books.stream().mapToLong(Book::getQuantity).sum());
         libraryStatistics.setTotalInventoryValue(books.stream().mapToDouble(book -> book.getPrice() * book.getQuantity()).sum());
-        libraryStatistics.setHighestPricedBook(books.stream().max((b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice())).map(Book::getBookName).orElse("N/A"));
-        libraryStatistics.setLowestPricedBook(books.stream().min((b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice())).map(Book::getBookName).orElse("N/A"));
+        libraryStatistics.setAverageBookPrice(books.stream().mapToDouble(Book::getPrice).average().orElse(0.0));
+
+        libraryStatistics.setHighestPricedBook(
+            books.stream().max((b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice())).map(Book::getBookName).orElse("N/A")
+        );
+        libraryStatistics.setLowestPricedBook(
+            books.stream().min((b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice())).map(Book::getBookName).orElse("N/A")
+        );
+
+        // Books count per category
+        libraryStatistics.setCategoryWiseBooks(
+            books.stream().collect(java.util.stream.Collectors.groupingBy(Book::getCategory, java.util.stream.Collectors.counting()))
+        );
+
+        // Books count per author
+        libraryStatistics.setAuthorWiseBooks(
+            books.stream().collect(java.util.stream.Collectors.groupingBy(Book::getAuthorName, java.util.stream.Collectors.counting()))
+        );
+
+        // Average price per category
+        libraryStatistics.setAveragePriceByCategory(
+            books.stream().collect(java.util.stream.Collectors.groupingBy(Book::getCategory, java.util.stream.Collectors.averagingDouble(Book::getPrice)))
+        );
+
+        // Books count per publisher
+        libraryStatistics.setPublisherWiseBooks(
+            books.stream().collect(java.util.stream.Collectors.groupingBy(Book::getPublisher, java.util.stream.Collectors.counting()))
+        );
 
         return libraryStatistics;
     }
