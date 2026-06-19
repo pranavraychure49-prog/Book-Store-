@@ -1,15 +1,17 @@
 package com.app.BookStore.repository;
 
+import java.io.File;
+import java.io.FileReader;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
 import com.app.BookStore.model.Book;
 import com.app.BookStore.model.LibraryStatistics;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.bean.CsvToBeanBuilder;
-import lombok.Getter;
-import org.springframework.stereotype.Component;
 
-import java.io.FileReader;
-import java.io.File;
-import java.util.List;
+import lombok.Getter;
 
 @Getter
 @Component
@@ -21,10 +23,17 @@ public class readData
         String csvPath = "src/main/java/com/app/BookStore/data/books_catalog.csv";
         String jsonPath = "src/main/java/com/app/BookStore/data/books_catalog.json";
 
-        books = new CsvToBeanBuilder<Book>(new FileReader(csvPath))
-                .withType(Book.class)
-                .build()
-                .parse();
+        try (FileReader reader = new FileReader(csvPath)) {
+            books = new CsvToBeanBuilder<Book>(reader)
+                    .withType(Book.class)
+                    .build()
+                    .parse();
+        } 
+        catch (Exception e) {
+            System.err.println("Failed to read CSV file: " + csvPath);
+            e.printStackTrace();
+            throw e;
+        }
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.writerWithDefaultPrettyPrinter()
